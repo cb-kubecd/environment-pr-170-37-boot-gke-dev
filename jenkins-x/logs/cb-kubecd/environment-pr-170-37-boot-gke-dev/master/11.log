@@ -1,0 +1,26 @@
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-hxw76[0m
+{"level":"warn","ts":1583014153.0430026,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583014153.043564,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-kx67h[0m
+{"level":"warn","ts":1583014154.4831622,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583014154.486956,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-cb-kubecd-environment-pr-1-9t992-8lw4m[0m
+{"level":"warn","ts":1583014160.5610387,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583014161.696415,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-170-37-boot-gke-dev.git @ 7e1c8e8ba8c6276219ff12f4ad538430459dea16 in path /workspace/source"}
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:7e1c8e8ba8c6276219ff12f4ad538430459dea16
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-cb-kubecd-environment-pr-1-9t992-11[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: : failed to git fetch origin 79852d55e6ae8aff3f4c657b0638d8a0186c124c for repo: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git in dir /builder/home/.**/jenkins-x-versions: failed to run 'git fetch origin 79852d55e6ae8aff3f4c657b0638d8a0186c124c' command in directory '/builder/home/.**/jenkins-x-versions', output: 'error: Server does not allow request for unadvertised object 79852d55e6ae8aff3f4c657b0638d8a0186c124c'
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
